@@ -7,3 +7,9 @@
     height: 600px;
     
 }
+
+.pixel{
+
+    border: 1px solid black;
+    box-sizing: border-box;
+}

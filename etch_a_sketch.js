@@ -19,11 +19,21 @@ function createGrid(n){
             const element = document.createElement("div");
             element.className = "pixel";
             element.style.flex = `0 0 ${100/n}%`
+            element.style.opacity = 0.1;
 
             element.addEventListener("mouseover", 
 
                 (e) => {
                     e.target.style.backgroundColor = "red";
+
+                    let opacity = parseFloat(e.target.style.opacity);
+
+                    if(opacity < 1){
+
+                        opacity+=0.1;
+                    }
+
+                    e.target.style.opacity = opacity;
                 }
             );
 
